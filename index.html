@@ -8,10 +8,15 @@
 <body style="text-align:center;margin-top:100px;">
 <h2>安卓APP下载</h2>
 <br>
-<a id="downloadBtn" href="" style="padding:14px 32px;background:#007aff;color:#fff;border-radius:10px;text-decoration:none;font-size:18px;">点击下载APK</a >
-<p style="margin-top:30px;color:#666;">⚠️微信打不开，请点右上角，在浏览器打开</p >
+<button onclick="copyLink()" style="padding:14px 32px;background:#007aff;color:#fff;border:none;border-radius:10px;font-size:18px;">复制下载链接</button>
+<p style="margin-top:20px;color:#666;">⚠️复制后打开手机浏览器粘贴访问下载</p >
+<p style="margin-top:10px;color:#999;">微信无法直接下载APK</p >
 <script>
-document.getElementById("downloadBtn").href="https://cdn.jsdelivr.net/gh/lutu722/APP@v1.0.0/default.apk";
+const apkUrl="https://github.com/lutu722/APP/releases/download/v1.0.0/default.apk";
+function copyLink(){
+  navigator.clipboard.writeText(apkUrl);
+  alert("链接已复制！请到浏览器粘贴打开！");
+}
 </script>
 </body>
 </html>
